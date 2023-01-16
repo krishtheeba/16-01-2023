@@ -1,0 +1,667 @@
+python
+------
+1. procedural style
+
+2. object oriented style 
+
+3. Functional style---> machine leaning
+
+
+os---command prompt---parent process (wait)
+
+     |
+     python shell --- child process R+
+
+python understanding format
+_-----------------------------function()  +   DS + class
+  + object 
+
+
+print("Hello")
+
+
+============================
+How to run python ?
+
+1. subshell- command prompt
+
+2. using editor
+
+3. using IDLE
+-------------------------------------------------
+
+new to programming
+------------------
+
+1. understand topic
+
+2. syntax for topic
+
+3. refer existing eg
+
+4. exercise
+
+
+variable
+=========
+
+placeholder or namespace- to hold data/ value
+
+syntax:-
+
+variableNaME = value
+
+# variablename---- start with a-z, A_Z
+              ----- not start with digit
+              -----not contain space/ spl char
+
+
+eg
+====
+
+myname= "Theeba"
+dbName='usr/lib/oracle'
+
+port=3656
+
+cost=642367.655
+
+print(myname)
+
+================================================
+
+2 types of errors 
+============
+
+1. syntax error - not following python rule
+
+2. logical error - eg.NameError
+
+
+task
+====
+Write a python pgm
+
+step1 : declare / initialize filesystem details 
+( fs type, 
+partition name, size,  mountpoint direction)
+
+step 2: using print()- display to monitor
+
+how to combine userdefined string and named var?
+===============================================
+
+1. using ,
+
+print("userdefined str", namedvariable)
+
+
+string(str)-------- collection of chars
+                                  -----
+                                   |------a-z,  A-Z,
+                	0-9, spl char
+                |---'.. '   ".."
+
+
+int ---> 
+
+how to determnine type
+======================
+
+type(single_varible)  (or)  type(value)
+
+
+Task
+===
+step 1: initialize emp details n(emp name, emp id, basic pay)
+                                  |
+
+                                  str        int      float
+
+step2: display details  and using type()- dtermine type
+
+
+
+
+
+2. using %s %d %f ===> C lang
+
+print("user defined string %s %d %f"%(namedvariable))
+
+
+a=11
+b=3.3
+c="data1"
+
+print("a value is %d b value is %f c value is %s"%(a,b,c)) 
+
+
+print("a value is",a,"b value is",b,"c value is ",c)
+
+
+
+3. using "".format() method
+
+"userdefined string {}".format(var)
+
+print("a value is {} b value is {} c value is {}".format(a,b,c))=>python 2.7 
+
+
+
+============================
+
+--> spl char  \n \t
+
+
+multiline string ( or) multiline statements
+===========================================
+
+s= "unis\nlinux\nmac"
+
+
+===========================================
+
+
+typecast
+========
+|---- change the data type--> current type to target type
+                                              -----------
+
+
+ex:-
+
+n=44
+
+convert to float type
+           ------
+             |--------float(Currenttype)
+
+convert to string (str)
+              ---------
+             |--------------str(var)
+
+str(56)----> '56'
+
+========================================================
+
+10 + 20
+========================================================
+
+
+
+recap
+=====
+
+variable
+
+- int, float, str
+- using ,
+-  using %f %d
+- using {}
+- multiline str
+- operators -----------> +, -, *, /, //, **  int
+            ---------> +  *
+-typecast
+
+----------------------------------------------------------------
+
+
+keyboard<STDIN> ----- python script---------------> monitor<STDOUT>
+					print()
+               input()
+
+
+input()
+-------
+|----------dynamically receive input via keyboard
+
+syntax:-
+
+variable= input('prompt message')
+--------         -------------
+|			|
+<STDIN>			<STDOUT>
+
+
+v=input("Enter name")
+
+
+Note:- input() always returns str type
+
+Task
+====
+
+step1 : read partition name name from <STDIN>
+	read partition size from <STDIN>
+
+step 2: read another partition name, size from <STDIN>
+
+step 3: calculate sum of partition size
+
+
+step 4: using multiline print()- display partition name, size
+                               - display total size 
+
+
+o/p
+
+Enter a partition : /dev/sda1
+Enter Size : 150
+
+Enter a partition : /dev/sda2
+Enter Size : 300
+
+
+Partition : /dev/sda1		Size: 150 GB
+Partition : /dev/sda2		Size: 300 GB
+==============================================
+				Total : 450 GB
+==============================================
+
+
+
+=--------------------------------------------------------------
+
+int float str  bool
+               ----
+                |----------True  False
+
+type(0), type(-1), type(534263436)----------> <class int>
+
+
+
+type(0.0), type(-1.0) , type(23446314.55) -----> <class float>
+
+
+type('0.0'), type(''),type('data')-------> class <str>
+
+type(True), type(False)---------- <class bool>
+
+
+=================================================================
+
+
+
+Expression
+============
+
+combination of operand and operator
+
+1. infix  a+b  operator placed between operands
+
+2. prefix ++a
+
+3. postfix a++
+
+
+in python-- only infix type of expression
+
+
+
+==================================================================
+
+
+
+1. relational operator
+
+==   !=    <     <=   >   >=   (int,float,st)----------> bool(True/ False)
+
+
+10 == 10
+
+--------------------------------------------------------------------------
+
+
+Conditional Statement
+====================
+
+|-------------------code block - execute only once
+
+|--------------- testing/ validation
+
+|--------------- using if keyword
+
+|-------------------any expression (or)  method (or) function should return a bool use conditional stmt
+
+
+|----- if -- 3 ways
+
+
+1) if only style
+==============-===
+
+syntax:-
+
+if(condition):
+	code block 1
+        code block 2
+	code block n
+
+
+-------------------------------------------------------
+
+2) if .. else style
+-------------------
+
+
+syntax:---
+
+if(condition):
+	True block
+else:
+	False block
+===================================================================
+
+Task
+=====
+
+write a python program
+
+step1: read shell name <stdin>
+
+step 2:- test input shell name as bash -----> initialize profile filename as bashrc
+                              |
+                           not a bash---------> initialize default profile filename as /etc/profile
+
+step3:- display shell name and profile filename
+
+
+
+------------------------------------------------------------------------
+
+if(True):
+	....1
+	... 2
+	if(condition):   
+		.... 3
+		... 4
+	else:
+		if(True):
+			...5
+			...6
+		else:
+			...7
+			...8
+else:
+	...9
+	...10
+
+---------------------------------------------------
+1 2 <True> 3 4 
+
+1 2  <False> 5 6
+===================================================
+
+
+
+Task
+=====
+
+step1: read a login name from <Stdin>
+step 2: test input name is root user or not-----> sorry you not a root user
+                            |
+
+			step 3: read shell name from <Stdin>
+			step 4: test input shell name is bash--------sorry input shell name is not matched
+							|
+							display working kernel is Linux
+
+read name
+
+if (name=="root"):
+	read shellname
+	if(shell=="bash"):
+		display working kernel is Linux
+	else:
+		sorry input shell name is not matched
+else:
+
+	sorry you not a root user
+
+
+------------------------------------------------
+
+3. if..elif style- multiconditional statement
+
+
+syntax:-
+
+if conditional1:
+	True block1
+elif condition2:
+	True block2
+elif condition3:
+	Trueblock3
+...
+else:
+	False block
+
+
+	
+Write a python program
+
+step 1:-read a shell name
+
+step 2:-  test input shell is bash- initialize profile filename - /etc/bashrc
+	test input shell is ksh- initialize profile filename - /etc/kshrc
+test input shell is csh- initialize profile filename - /etc/cshrc
+|
+
+|
+fails
+
+|
+initialize default shellname   /bin/nologin profile filename as /etc/profile
+
+
+step 3: display shellname and profile filename
+
+
+
+===================================================================================
+
+
+Relational operator----- single test
+
+
+Logical operator-------- multiple test(int,float,str)-------> bool (true/false)
+
+
+login =="loginName"   ---(1)
+
+passwd == "passwd"    ---(2)
+
+
+
+sh=="bash"  ---(1)
+
+sh=="ksh" ----(2)
+
+
+port >5000 ---(1)
+
+port<6000  ---(2)
+
+
+
+and				or			not
+
+logical and
+=====
+cond1	cond2	result
+True	True	True
+True	False	False
+False	True	False
+False	False	False
+
+
+Logical or
+
+===========
+cond1	cond2	result
+True	True	True
+False	True	True
+True	False	True
+False	False	False
+
+
+Logical not
+
+True-->False
+False-->True
+
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
