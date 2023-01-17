@@ -1,0 +1,342 @@
+About python
+features
+how to run python
+
+procedural style
+================
+
+variable- namespace
+operators - arithmetic operator, string, relational, logical
+conditional- validation/ testing
+|
+if
+if expression:
+	...
+else:
+	...
+
+
+multiconditional stmts
+if elif else
+
+
+Looping stmts- code block executed more than once
+|
+|---conditional style loop ---- while loop
+|----collection style loop----- for loop
+
+
+break, continue
+
+
+---------------------------
+
+while ..else
+============
+
+syntax:-
+
+while  condition:
+	True block - execute more than one time based on cond.
+else:
+	False block - only one time execution
+
+
+for... else
+==========
+syntax:-
+
+for var in collection:
+	true block
+else:
+	False block 
+
+
+
+string slicing
+===============
+stringName[n:m]
+           | |---------------------extracts up to (m-1) index
+           start index
+
+
+1. help(str)---->help('') --- function
+
+
+2. pydoc module
+
+python -m pydoc str {enter}
+
+
+python -m pydoc json {enter}
+
+
+len()
+print()
+input()
+type()
+---------------------functions     procedural style
+
+"{}".format(var)-----------method    oops 
+
+----------------------------------------------------------------
+
+List
+======
+
+- collection of ordered elements -  index based  - mutable -modify/add/delete
+- list supports slicing, index
+elmts separated by comma
+[] denotes a list
+
+help([])
+
+
+
+
+to access single element from a list
+====================================
+
+Listname[index]----> value/ IndexError if index not exist
+
+
+
+modifying the existing elemnts to list
+-----------------------------
+
+Listname[index]=value
+
+
+To add new elements to existing list
+===============================
+
+listname.append(value)--> none   -- appends at end of list
+
+listname.insert(index,value) ---> none 
+
+==========================================================================
+
+
+
+List - collection of ordered elmts(different types) - index based - mutable - []
+
+
+Tuple - Collection of ordered elmts(diffrent types)- index based - immutable - ()
+
+
+List-- supports index, slicing, memebership
+
+Tuple- supports index,slicing, membership-   immutable - we cant modify/add/remove elmts
+
+
+Syntax:-
+-------
+
+
+
+tuple_name = (collection of elmts separated by comma)
+
+config_file=("/etc/passwd","/etc/pam.d","/etc/modules")
+
+
+
+Multidimensional strctures 
+==========================
+
+List of List
+List of Tuple
+Tuple of List
+Tuple of Tuple
+
+L= [[1,2,3],['a','b','c'], ['data',1,3.44]]
+
+     0 1 2    0   1   2        0   1  2
+     ------ -------------  ----- ---------- 
+       0        1              2
+
+   ----------------------------------------
+
+	outer list
+
+syntax;- Listname[index]
+
+L[0][2]->    3
+
+
+
+List of Tuple
+------------
+
+L= [ (), (), (), () ]
+
+List of List
+
+L= [ [], [], [], [] ]
+
+
+
+Tuple of List
+
+T= ([], [], [], [])
+
+Tuple of Tuple
+
+T=((), (), (), ())
+
+
+============================================================
+
+
+File handling- str, list
+
+
+
+
+keyboard<STDIN>-------input()-----python----print()------Monitor<STDOUT>
+
+				   |
+				Storage device(file)
+
+
+1. Read data from <FILE> --- python ---- display to monitor
+
+2. python--create a NEW FILE - write data to FILE
+
+3. Read  from <one FILE> -- python --create/write data to another FILE 
+
+
+
+--------------------------------------
+
+User Layer: Python	------------------------
+---------------|--				|
+Kernel  layer (1)				|
+			[d1 d2 d3 d4....dn]  0x1233   (3)
+-------------|--	|	
+		(2)	|
+Hardware layer HD  ----|
+
+
+
+fobj=open("filename","mode")----->file descriptor
+		  |-------------------------------read,write,append
+
+fobj.close()
+
+
+
+------------------------------------------------------------------
+
+Task
+===
+
+The user can have a max limit of 3 times to try.
+
+step 1. read a pin from <stdin> .
+step 2. Test the pin with PIN=1234.
+step 3. If matched, give a success message and exit from loop
+step 4. If not matched, display, "PIN NOT MATCHED" to monitor
+
+
+
+
+===============================================================
+
+python
+fobj= open("filename","r") (6)
+|
+open("filename","mode")-----------------------------------(5)
+|(1)							|
+							|
+kernel
+|	
+(2)					[d1 d2 d3.. dn] 0x1234 (4)
+|					|
+Hardware				|
+------------HD-- d1 d2 d3 d4.. dn  (3)
+
+
+
+
+fileobject  /  file descriptor /  file reference
+(7)
+fobj.read()------------->"d1 d2 d3....dn" then 0x1234 will empty
+fobj.read()------------> ""
+fobj.readlines()--------->[]
+
+
+
+fobj.read()---> returns  single str
+
+fobj.readlines()---> return list of elmt-->
+
+
+To open a file
+--------------
+open("filename","mode")
+		  |-----------------"r"	read mode
+		  |-----------------"w" write mode
+		  |-----------------"a" append mode
+
+
+To write single data to file
+
+
+wobj= open("filename","w")
+
+wobj.write("Single data")
+
+wobj.close()
+
+=============================
+
+block style
+
+with as - python keywords
+
+with open("filenam","mode") as fobj:
+
+	for var in fobj.readline():
+		...
+		....
+
+
+# fobj.close() is not required
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
