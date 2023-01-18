@@ -1,0 +1,327 @@
+List/Tuple- index based-  ordered 
+
+dictionary(dict)
+
+|-----------------collection of unordered elmts
+
+|-----------------data - key:value  format
+
+|---------------- { "key":"value"} ----> "key" should be unique
+
+|----------------- key based access
+
+|-----------------  like list--- mutable
+				=========== add/ delete/ modify
+
+dict -  like table
+
+
+key	|	value
+---------------------
+key1	|	value
+----------------------
+key2	|	value2
+-----------------------
+key3	|	value3
+----------------------
+
+
+
+
+L=[]
+t=()
+
+d={} # empty dict
+
+d={"K1":100, "k2":23.33, "k3":True, "k4":"Mr.Raju"}
+
+
+
+
+#How to fetch single data from dict?
+
+# listname[index]----> emt
+
+dictname['key']-----> value
+           |
+          existing key
+
+
+# how to add new data to existing dict
+
+#L.append(value)    L.insert(index,value)
+
+
+dictname['newkey']=Value
+
+#How to modify already existing data
+
+#Listname[oldindex]=updatedvalue
+
+dictname["oldkey"]=updated_value
+
+
+for var in L:
+	print(var)  # displays all emts of list
+
+
+#To delete an entry from dict
+
+dictname.pop("existing_key")----> value
+-----------------------------------------------
+
+dictname.setdefault("key","value")
+
+==============================================================
+
+emp={"eid":123, "ename":"Mr.Raj", "edept":"Sales"}    1D
+
+
+
+emp={"eid":[123,456,222,444], "ename":["Mr.Raj","Mr.Kamal","Ms.Puja"], 
+
+"edept":["Sales","HR","Prod"]}
+
+
+#dict of list
+
+
+
+emp={"eid":(123,456,222,444)}
+
+
+# dict of tuple
+
+
+
+
+# dict of dict
+
+
+d={"key":"value"}
+
+          ------
+	   dict
+
+d={"class":{}, "id":{}} # dict of dict
+
+d={"class":{"k1":"v1", "k2":"v2", "k3":"v3"}, "id":{"k1":100,"k2":200}} dict of dict
+
+
+
+dd={'k1':[], 'k2':(), 'k3':{}}
+
+L=[[],(),{}]
+
+T=([],(),{})
+
+================================================================
+
+list/tuple			vs		dict
+
+collection of					collection of unordered emt
+ 
+ordered elmts
+
+
+data-single					dat-(key:value)
+
+
+index						key 
+
+list-mutable
+tuple -immutable				dict-mutable(value)
+
+l[index]=value					dict["key"]=value
+l.append(value)					d.setdefault("key","value")
+
+
+l.pop(index)					d.pop("key")
+
+"searchpattern" in inputList			"seaqrchKey" in inputdict
+
+							
+
+
+========================================================================================
+
+
+
+Set							dict
+====							=====
+Collection of unordered emt					collection of unordered emts
+
+-key only format					- {"key":"value"}
+
+-set is not index based
+- set is not key:value based
+
+
+-set doesnot allow duplicates
+
+syntax:-
+
+setName={list of keys}
+
+s={"k1","k2",10,20,"k3"}		vs 		d={"key1":"value1", "key2":"value"}
+
+
+
+To add new data to existing set
+
+syntax:-
+setname.add(ScalarData)
+
+setName.update(Collection)
+
+
+==================================================================================================
+
+Task
+====
+
+property file
+=============
+
+interface=eth0
+bootproto=static
+Ip=10.20.30.40
+DNS2=122.333.444.555
+
+step 0:- create empty dict----------------------------f1()
+step 1. open a property file
+step 2:  convert the property details to a dict
+
+
+
+
+
+fobj=open("D:\\property.txt","r")
+
+for v in fobj:
+	
+	L=v.split("=")===> ["interface","etho",]
+				0          1
+
+				L[0]-k    L[1]- v
+
+	-------------------------------------------------------------f2()
+
+
+step 3:- display the dict--------------------- f3()
+
+
+
+step4 :- update an existing propert with new value
+
+change interface value from eth0 ====> eth1
+						
+
+step5:- Add new data to existing dict
+
+onboot=yes					------------------f4()
+
+step 6:- display the updated dict----------f3()
+
+step 7:- create a newproperty file with updated dict  (write operation) ----------f5()
+
+
+
+======================================================================================================
+
+
+function
+=========
+
+
+syntax:-
+
+def functionName(parameters):
+	code block
+
+
+-----> function definition	- action block 
+
+-----> function call	- invoking this function defn
+
+
+len()
+help()
+print()
+input()
+
+
+- avoid code duplication
+- easy to understand
+-reusability
+==========================================================
+
+return- keyword- can use inside function
+      - cannot find outside function
+      - pass the value from function to main script
+
+
+
+=================================
+
+def fx(var=100): #Default arg		vs		def fy(**var):   # keyword arg
+	...							..
+	....							..
+	
+fx()							fy(var=100)  # dict with 1 elmt
+fx(200)							fy()   # empty dict
+
+
+
+
+-------------------------------------------------------------
+
+exit() - function- write anywhere in program- inside conditional stmt/ insede function
+
+- exit from python execution
+
+
+break- keyword- looping stmts- this is not a function
+- comes out of loop
+
+
+return- keyword - inside function only - not outside function
+- exit fron function definition- exit from script
+
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
