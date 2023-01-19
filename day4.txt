@@ -1,0 +1,369 @@
+
+s= "root:bin:bash:tty"
+
+s.split(":")--> ["root","bin","bash","tty"]
+
+":".join(L)---> "..." list of str to single str
+
+function--> fn defn
+	--> fn call
+
+arg
+|---required arg
+|----default arg
+|----variable length arg  --> tuple
+|---- keyword arg---> dict
+
+def f1(a1,a2="data",*a3,**a4):
+	....
+
+f1(10)
+f1(10,20,30,40,50,name="theeba",id=111)
+   |  |--======== ********************
+         |
+requrd   |
+       DEFAULT
+return, global
+
+
+Module
+=======
+
+import <filename>
+         |
+
+	Module / loadable file / runnable file
+
+
+	D:\\
+	|----ab.py
+	|----p1.py
+	|----p2.py
+	|
+	------L1
+		|---p3.py
+
+import modulename
+
+python	-  1 ) find module location-----> sys.path
+	   2) get compiled source file (.pyc)--bytecode------> input PVM
+
+
+sys- predefined module
+
+
+import sys
+
+sys.path.append("remotepath")
+
+import module
+
+module.member
+
+
+pip3 install <modulename>
+
+
+os module - run os commands
+
+
+os.getpwd()----> current working directory
+
+os.system("command")-----> return status code
+
+- display the command execution to monitor
+
+
+
+os.popen("command")----> return <Address>
+
+to view the command result,
+
+os.popen("command").read().strip()
+
+os.system()   Vs os.popen()
+
+
+os.system()----> return command exit status code- cant capture result of cmd to python var
+os.popen()---returns Address of command nresult--> apply read() ---store var
+
+
+
+os.listdir("D1")// list out files in D1 dir
+
+os.mkdir("D2") 
+
+os.chdir("D1")
+
+os.rmdir("D2") // removes only an empty dir
+
+
+import shutil
+shutil.rmtree("D2") // remove any non-empty dir-- recurssive removal
+
+
+os.path.exists("..")
+
+os.path.isfile("..")
+
+os.path.isdir("..")
+
+
+help("modulename")
+
+help("modules")---> list of modules
+
+
+sys module
+========
+
+-predefined module contain system specific parameters
+
+
+
+import httpResponseCode
+
+httpResponseCode.function()
+httpResponseCode.variable
+
+import httpResponseCode as hp
+
+hp.function()
+hp.variable
+
+============================================================================
+
+
+
+Package - directory structure
+
+
+mkdir project
+
+cd project
+	file1	file2	file3	.....filen
+          |	 |...............................
+
+
+
+import file1
+import file2
+
+
+module-  ordinary file - python(.py/.pyc)
+
+package - collection of module- directory / folder
+
+mkdir demo
+cd demo
+
+
+To create package
+=================
+
+1. create a new folder
+
+2. collect all .py files
+
+3. create a special initialization file __init__.py
+					|
+					import external loadable file
+4, test your package
+
+===========================
+
+syntax:-
+
+from modulename import member
+
+from ab import port
+
+===============================================
+
+
+from module import var1,var2
+
+
+from module import *
+
+
+=================================================================
+
+
+Exception Handling
+===================
+
+Exception- unexpected situation
+
+
+
+
+Error
+|----------Syntax Error( against python syntax rule)
+
+|--------- Logical Error( NameError, ValueError)
+
+
+try:
+	s1<may happen>
+	S2
+except:
+	s3
+
+else:
+	s4
+
+case Exception:---> s1,s3,s4
+
+Exception, NameError, TypeError- predefined class
+
+========================================================================
+
+python code
+|-------------Procedural style
+
+|-------------functional style
+
+|------------object oriented
+
+
+
+Functional style programming of python
+=======================================
+
+iterator
+generator
+|
+lamba
+|
+comprehension
+|
+map,filter,reduce
+
+
+iterator---> Address
+
+List comprehension
+===================
+syntax:-
+[code for variable in collection]
+
+====================================================
+[v+100 for v in [10,20,30]] # List comprehension
+
+same as
+
+L=[]				# block style way
+for v in [10,20,30]:
+    r=v+100
+    L.append(r)
+
+==============================================
+
+List creation based on a condition
+
+syntax:-
+[true_stmt if condition else false_stmt for var in collection]
+
+eg.
+
+[v+10 if v>3 else v+50 for v in [1,2,3,4,5]]
+
+
+=================================================
+
+map(function,collection)
+------------------------------> returns all updated elmts  
+
+filter(function,collection)-----> checks for condition
+-->filter returns only the elmts that satisfied condition
+
+reduce(function,collection)
+-----------------------------> returns single elmt
+
+in python 3.x
+
+import functools
+functools.reduce
+
+functools.reduce(lambda a,b:a+b,[10,20,30,40,50])
+
+[ 10	20	30	40	50]
+
+----------
+	|
+	30
+	----------
+		|
+		60
+		----------|
+			 100
+			  |-------|
+				   150
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
